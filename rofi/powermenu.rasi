@@ -1,0 +1,75 @@
+@import "~/.config/rofi/themes/KooL_style-2-Dark.rasi"
+
+* {
+  font: "JetBrainsMono Nerd Font 14";
+  border-radius: 10px;
+  text-color: #cdd6f4; /* Light bluish-white text */
+}
+
+window {
+  background-color: #1e1e2e; /* Deep dark background */
+  border: 3px;
+  border-color: rgba(0, 170, 255, 0.6); /* Bright cyan-blue border */
+  border-radius: 15px;
+  fixed-width: 400px;
+  padding: 20px;
+}
+
+mainbox {
+  layout: vertical;
+  spacing: 10px;
+  children: [ "listview" ];
+  expand: true;
+}
+
+listview {
+  layout: vertical;
+  spacing: 10px;
+  scrollbar: false;
+  background-color: transparent;
+  expand: true;
+  fixed-height: true;
+}
+
+element {
+  background-color: #273449; /* Muted navy blue */
+  border: 3px;
+  border-color: rgba(0, 170, 255, 0.4); /* Soft cyan border */
+  border-radius: 8px;
+  padding: 12px;
+  spacing: 10px;
+  text-color: #cdd6f4;
+  cursor: pointer;
+  children: [ "element-icon", "element-text" ];
+  expand: true;
+}
+
+element selected {
+  background-color: rgba(0, 170, 255, 0.8); /* Bright cyan when selected */
+  border: 3px;
+  border-color: rgba(51, 200, 255, 0.7); /* Lighter cyan highlight */
+  text-color: #1e1e2e; /* Dark text for contrast */
+}
+
+element-icon {
+  size: 24px;
+  margin: 0px 10px 0px 0px;
+  background-color: transparent;
+  vertical-align: 0.5;
+  horizontal-align: 0.0;
+}
+
+element-text {
+  text-color: inherit;
+  background-color: transparent;
+  vertical-align: 0.5;
+  horizontal-align: 0.0;
+  expand: true;
+  word-wrap: true;
+}
+
+box {
+  orientation: horizontal;
+  expand: true;
+  spacing: 10px;
+}
